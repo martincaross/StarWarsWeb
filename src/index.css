@@ -1,0 +1,43 @@
+/* Fuente Star Wars */
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+*{
+    background-color: black;
+}
+
+.star-wars-font {
+  font-family: 'Star Wars', sans-serif;
+}
+
+/* Aplicar a navbar y barra inferior */
+.navbar-title {
+    font-family: 'Star Wars', sans-serif !important;
+    font-size: 5vh; /* Se adapta dinámicamente al ancho de la pantalla */
+    color: #FFC500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+.navbar-bottom {
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 2px solid #FFC500;
+}
+
+.navbar-bottom a {
+  color: #FFC500;
+  text-decoration: none;
+  font-size: 2vh;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.navbar-bottom a:hover {
+  color: #FFF;
+}
+
+.home-container {
+    margin-top: 100px; /* Ajusta el espacio según el tamaño del navbar */
+  }
