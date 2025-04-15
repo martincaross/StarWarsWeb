@@ -1,8 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { CharacterDetail } from "../components/CharacterDetail";
-import { PlanetDetail } from "../components/PlanetDetail";
-import { VehicleDetail } from "../components/VehicleDetail";
+import { Detail } from "../components/Detail";
 
 export const Single = () => {
     const location = useLocation();
@@ -11,9 +9,9 @@ export const Single = () => {
 
     return (
         <>
-            {category === "people" && <CharacterDetail />}
-            {category === "planets" && <PlanetDetail />}
-            {category === "vehicles" && <VehicleDetail />}
+            {category === "people" && <Detail />}
+            {category === "planets" && <Detail />}
+            {category === "vehicles" && <Detail />}
         </>
     );
 };

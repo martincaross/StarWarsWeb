@@ -1,0 +1,54 @@
+.character-detail-container {
+    margin-top: 20px;
+    color: white;
+}
+
+.character-detail-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.character-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.character-info {
+    flex: 1;
+}
+
+.character-info h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.character-info p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.character-details {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.character-detail-item {
+    flex: 1 1 45%;
+    font-size: 18px;
+}
+
+.character-detail-item h5 {
+    font-weight: bold;
+    color: #FFC500;
+}
+
+hr {
+    border: 1px solid #FFC500;
+    margin: 20px 0;
+}
