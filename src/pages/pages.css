@@ -1,9 +1,25 @@
-/* * {
-    outline: 1px solid red !important;
-    box-sizing: border-box;
-  } */
+.home-top {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
 
-  .layout {
+.button-cat,
+.button-fav {
+  background-color: #FFC500;
+}
+
+.home-container {
+  margin-top: 25px; 
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+
+.layout {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
@@ -127,4 +143,5 @@
   cursor: pointer;
   user-select: none;
 }
+
 

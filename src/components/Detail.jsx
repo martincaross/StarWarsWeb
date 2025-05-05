@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./Detail.css"; // Usa el CSS existente
+import "./components.css"; // Usa el CSS existente
 
 export const Detail = () => {
     const { category, theId } = useParams();
