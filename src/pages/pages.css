@@ -4,130 +4,43 @@
   margin-top: 50px;
 }
 
+  /* Estilo común botones */
 .button-cat,
 .button-fav {
-  background-color: #FFC500;
-}
-
-.home-container {
-  margin-top: 25px; 
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 2rem;
-}
-
-
-.layout {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-}
-
-/* Sidebar base */
-.sidebar {
-    width: 220px;
-    background-color: #1b1b1b;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex-shrink: 0;
-}
-
-/* Botón hamburguesa */
-.menu-toggle {
-    background-color: #ffc500;
-    border: none;
     color: black;
-    font-size: 28px;
-    padding: 10px 20px;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
-    border-radius: 5px;
+    background-color:#FFC500;
+    border: none;
+    padding: 8px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ffe81f80;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-/* Main content */
-.main-content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    background-color: #000;
+/* Hover efectos */
+.button-cat:hover,
+.button-fav:hover {
+    background-color: #fff349;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #fff349a0;
 }
 
-/* Cards */
-.fixed-card {
-    width: 100%;
-    background-color: #222;
-    color: white;
-    border: 2px solid #FFC500;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 15px;  /* Aplicando borde redondeado en todo el contenedor */
-    overflow: hidden;     /* Aseguramos que el contenido se recorte correctamente */
+/* Botón favoritos especial (más oscuro) */
+.button-fav {
+    background-color: #ff7f50;
+    box-shadow: 0 0 10px #ff7f5080;
 }
 
-.fixed-card:hover {
-    transform: scale(1.10);
+.button-fav:hover {
+    background-color: #ffa07a;
+    box-shadow: 0 0 15px #ffa07aa0;
 }
-
-/* Estilo para las imágenes con bordes redondeados solo arriba */
-.fixed-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-top-left-radius: 15px;  /* Redondeo de esquina superior izquierda */
-    border-top-right-radius: 15px; /* Redondeo de esquina superior derecha */
-}
-
-/* Botón de categoría personalizado */
-.btn.category-btn {
-  background-color: #1c1c1c;
-  color: #f5c518;
-  border: 1px solid #f5c518;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 8px 20px;
-  transition: all 0.3s ease;
-}
-
-.btn.category-btn:hover {
-  background-color: #f5c518;
-  color: #1c1c1c;
-}
-
-/* Estilo del dropdown */
-.dropdown-menu {
-  background-color: #2b2b2b;
-  border: 1px solid #444;
-}
-
-.dropdown-item {
-  color: #f5c518;
-}
-
-.dropdown-item:hover {
-  background-color: #f5c518;
-  color: #1c1c1c;
-}
-
-
-.card-body {
-  position: relative;
-}
-
-.card-title-container {
-  position: relative;
+.outer-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* centra el contenedor en la página */
 }
 
 .card-title {
@@ -143,5 +56,3 @@
   cursor: pointer;
   user-select: none;
 }
-
-
