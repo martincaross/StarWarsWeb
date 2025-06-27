@@ -4,7 +4,6 @@
   margin-top: 50px;
 }
 
-  /* Estilo común botones */
 .button-cat,
 .button-fav {
     color: black;
@@ -20,7 +19,6 @@
     text-transform: uppercase;
 }
 
-/* Hover efectos */
 .button-cat:hover,
 .button-fav:hover {
     background-color: #fff349;
@@ -28,7 +26,6 @@
     box-shadow: 0 0 15px #fff349a0;
 }
 
-/* Botón favoritos especial (más oscuro) */
 .button-fav {
     background-color: #ff7f50;
     box-shadow: 0 0 10px #ff7f5080;
@@ -40,13 +37,13 @@
 }
 .outer-container {
   display: flex;
-  justify-content: center; /* centra el contenedor en la página */
+  justify-content: center;
 }
 
 .card-title {
   margin: 0 auto;
   color: white;
-  font-size: 0.85rem; /* antes era 1rem */
+  font-size: 0.85rem;
 }
 
 .favorite-icon {

@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages.css";
 import { Card } from "../components/Card";
+import useGlobalReducer from "../hooks/useGlobalReducer";
 
 export const Home = () => {
   const [characters, setCharacters] = useState([]);
   const [planets, setPlanets] = useState([]);
   const [vehicles, setVehicles] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
+  const { store } = useGlobalReducer();
 
   useEffect(() => {
     fetch("https://www.swapi.tech/api/people")
@@ -26,7 +28,6 @@ export const Home = () => {
       .catch(err => console.error("Error fetching vehicles:", err));
   }, []);
 
-  // Mezcla los datos según la categoría activa
   const getFilteredData = () => {
     switch (activeCategory) {
       case "characters":
@@ -35,6 +36,8 @@ export const Home = () => {
         return planets.map(item => ({ ...item, category: "planets" }));
       case "vehicles":
         return vehicles.map(item => ({ ...item, category: "vehicles" }));
+      case "favorites":
+        return store.favorites || [];
       default:
         return [
           ...characters.map(item => ({ ...item, category: "people" })),
@@ -51,7 +54,7 @@ export const Home = () => {
         <button className="button-cat" onClick={() => setActiveCategory("characters")}>Characters</button>
         <button className="button-cat" onClick={() => setActiveCategory("planets")}>Planets</button>
         <button className="button-cat" onClick={() => setActiveCategory("vehicles")}>Vehicles</button>
-        <button className="button-fav">Favorites</button>
+        <button className="button-fav" onClick={() => setActiveCategory("favorites")}>Favorites</button>
       </div>
 
       <div className="outer-container mt-5 mb-5">
